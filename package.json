@@ -1,0 +1,31 @@
+{
+  "name": "API_Niceplanet",
+  "version": "1.0.0",
+  "description": "Desafio processo seletivo Niceplanet",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "João Vitor de Sousa",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.7",
+    "path": "^0.12.7",
+    "pg": "^8.8.0",
+    "sequelize": "^6.23.1",
+    "sucrase": "^3.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
