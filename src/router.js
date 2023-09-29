@@ -1,11 +1,12 @@
 import express from "express";
 import ControllerLogin from "./controllers/ControllerLogin.js";
 import verificarJWT from "./middlewares/Auth.js";
+import UserRules from "./middlewares/UserRules.js";
 
 const router = express.Router()
 
-
-router.post('/login', ControllerLogin.login)
+//validar
+router.post('/login', UserRules, ControllerLogin.login)
 
 router.get('/teste', verificarJWT, (req, res) => {
     res.json({
