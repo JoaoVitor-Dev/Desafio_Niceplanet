@@ -5,7 +5,7 @@ import { db_config } from "../../config/config.js"
 const db = new Sequelize(db_config.database, db_config.username, db_config.password, {
     dialect: db_config.dialect, 
     host: db_config.host,
-    logging: true
+    logging: false
 });
 
 export default db;

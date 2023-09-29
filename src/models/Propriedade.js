@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../config/database.js";
 
-const Propriedade = db.define("usuario", {
+const Propriedade = db.define("proriedade", {
     "idPropriedade": {
         type: DataTypes.BIGINT, 
         primaryKey: true,
