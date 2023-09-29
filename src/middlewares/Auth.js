@@ -5,7 +5,7 @@ export default function verificarJWT(req, res, next) {
   if (!token)
     return res.status(401).json({
       auth: false,
-      message: "Não autorizado!",
+      message: "Nao autorizado!",
     });
 
   Jwt.verify(token, process.env.SECRET, function (err, decoded) {

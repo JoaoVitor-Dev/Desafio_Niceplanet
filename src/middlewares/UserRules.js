@@ -7,3 +7,5 @@ export default function UserRules(){
         body('senha', 'A senha é requerida!').exists()
     ]
 }
+
+
