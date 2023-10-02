@@ -6,12 +6,12 @@ import UserRules from "./middlewares/UserRules.js";
 
 const router = express.Router()
 
-//validar
+//Rota de login
 router.post('/login', UserRules(), Checker, ControllerLogin.login)
 
 router.get('/teste', verificarJWT, (req, res) => {
     res.json({
-        "testado": "sim"
+        "Testado": "sim"
     })
 })
 
