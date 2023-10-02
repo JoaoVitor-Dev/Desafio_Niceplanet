@@ -2,7 +2,7 @@ import Usuario from "../models/Usuario.js";
 import bcryptjs from "bcryptjs";
 import Jwt from "jsonwebtoken";
 
-export default new (class ControllerLogin {
+export default new class ControllerLogin {
   async login(req, res) {
     const usuario = await Usuario.findOne({
       attributes: ["nomeUsuario", "senhaUsuario"],
@@ -38,4 +38,4 @@ export default new (class ControllerLogin {
       token,
     });
   }
-})();
+};

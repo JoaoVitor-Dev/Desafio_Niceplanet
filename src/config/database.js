@@ -13,4 +13,5 @@ const db = new Sequelize(
   }
 );
 
+//exportando configuração do Database
 export default db;

@@ -2,8 +2,10 @@ import { Propriedade } from "../models/index.js"
 
 export default new class ControllerPropriedade{
     async novaPropriedade(req, res){
-        //desestruturação aplicada
+        //desestruturação do body da requisição
         const {nomePropriedade, cadastroRural, idProdutor} = req.body 
+
+        //criando uma nova Propriedade no Banco de Dados
         await Propriedade.create({nomePropriedade, cadastroRural, produtorIdProdutor: idProdutor}).then(() => {
             res.json({
                 "Mensagem": "Propriedade cadastrada com sucesso!"
@@ -15,6 +17,7 @@ export default new class ControllerPropriedade{
         })
     }
 
+    //Método de consulta 
     async consultaPropriedade(req, res) {
         const { id } = req.query;
         await Produtor.findAll(id && { where: { idPropriedade: id } })

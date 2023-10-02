@@ -2,6 +2,7 @@ import { Usuario } from "../models/index.js";
 import bcryptjs from "bcryptjs";
 
 export default async function criarUsuario() {
+  
   const salt = bcryptjs.genSaltSync();
   const senha = bcryptjs.hashSync("123", salt);
 

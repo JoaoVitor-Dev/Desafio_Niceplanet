@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../config/database.js";
 
+//Defindo a tabela Propriedade com sequelize
 const Propriedade = db.define("propriedades", {
     "idPropriedade": {
         type: DataTypes.BIGINT, 

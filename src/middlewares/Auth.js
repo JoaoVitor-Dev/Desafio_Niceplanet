@@ -1,5 +1,6 @@
 import Jwt from "jsonwebtoken";
 
+//Exportando função que verifica se o Token enviado é válido
 export default function verificarJWT(req, res, next) {
   const token = req.headers["authorization"];
   if (!token)

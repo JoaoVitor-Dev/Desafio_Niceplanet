@@ -1,7 +1,10 @@
 import { Produtor } from "../models/index.js";
 
+//Exportando classe do Controller Produtor junto seus métodos
 export default new class ControllerProdutor {
+  //Método para adicionar novo Produtor
   async novoProdutor(req, res) {
+
     const { nomeProdutor, cpfProdutor } = req.body;
 
     await Produtor.create({ nomeProdutor, cpfProdutor })
@@ -17,7 +20,9 @@ export default new class ControllerProdutor {
       });
   }
 
+  //Método para consultar produtor (por ID ou TODOS)
   async consultaProdutor(req, res) {
+    
     const { id } = req.query;
 
     await Produtor.findAll(id && { where: { idProdutor: id } })

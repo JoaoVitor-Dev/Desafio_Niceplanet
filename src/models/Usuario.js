@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../config/database.js";
 
+//Defindo a tabela Usuário com sequelize
 const Usuario = db.define("usuario", {
     "idUsuario": {
         type: DataTypes.BIGINT, 

@@ -2,15 +2,19 @@ import { database, Usuario } from "./src/models/index.js";
 import express from "express";
 import router from "./src/router.js";
 import criarUsuario from "./src/config/UsuarioAPI.js";
-
+//Criando instância do express
 const app = express();
 
+//Chamando um middleware do Express serializar o corpo das requisições para objeto JavaScript
 app.use(express.urlencoded());
 
+//Passando um middleware do Express para fazer o parse nas requisições
 app.use(express.json());
 
+//Estabelecendo para o express que todas as rotas estarão após o /api/
 app.use("/api", router);
 
+//inicia a aplicação
 app.on("connected", () => {
   app.listen(3000, () => {
     console.log("API rodando:http://localhost:3000");
@@ -19,45 +23,9 @@ app.on("connected", () => {
 
 try {
   await database.authenticate();
-  //comando para criar tabelas
+  //comando para criar as tabelas no banco de dados
   await database.sync();
   await criarUsuario();
   app.emit("connected");
 } catch (err) {}
 
-/*
-try {
-    await database.authenticate();
-    console.log('Connection has been established successfully.');
-    await database.sync() 
-
-     await database.query('select * from usuarios').then(resultado => {
-        console.log(resultado)
-    }).catch(error => {
-        console.log(error)
-    })
-
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
-
-/*
-
-await Usuario.update({nomeUsuario: 'akdjasdja'}).then(resultado => {
-    console.log(resultado)
-}).catch(error => {
-    console.log(error)
-})
-
-/*
-try {
-
-    const result = await Usuario.update({nomeUsuario: '543535345'})
-    await
-
-    await database.query('select * from usuarios')
-
-}catch(e) {
-    ...
-}
-*/

@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../config/database.js";
 
+//Defindo a tabela Produtor com sequelize
 const Produtor = db.define("produtor", {
     "idProdutor": {
         type: DataTypes.BIGINT, 
