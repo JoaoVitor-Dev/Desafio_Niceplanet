@@ -25,7 +25,7 @@ export default new class ControllerPropriedade{
         os registros referentes a esse ID.
         Caso não haja ID, o mesmo retorna todos
         */
-        await Produtor.findAll(id && { where: { idPropriedade: id } })
+        await Propriedade.findAll(id && { where: { idPropriedade: id } })
           .then((r) => {
             res.json(r);
           })
