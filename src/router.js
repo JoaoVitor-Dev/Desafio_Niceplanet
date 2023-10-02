@@ -5,7 +5,7 @@ import Checker from "./middlewares/Checker.js";
 import UserRules from "./middlewares/UserRules.js";
 import ControllerProdutor from "./controllers/ControllerProdutor.js";
 import ProducerRules from "./middlewares/ProducerRules.js";
-import ControllerProprieade from "./controllers/ControllerProprieade.js";
+import ControllerProprieade from "./controllers/ControllerPropriedade.js";
 import PropertyRules from "./middlewares/PropertyRules.js";
 
 const router = express.Router()

@@ -9,7 +9,7 @@ const db = new Sequelize(
   {
     dialect: db_config.dialect,
     host: db_config.host,
-    logging: true,
+    logging: false,
   }
 );
 

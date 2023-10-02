@@ -12,12 +12,12 @@ export default new class ControllerProdutor {
     await Produtor.create({ nomeProdutor, cpfProdutor })
       .then(() => {
         res.json({
-          Status: "Produtor cadastrado!",
+          "Mensagem": "Produtor cadastrado!",
         });
       })
       .catch((error) => {
         res.status(500).json({
-          mensagem: "Nao foi possivel cadastrar o produtor!",
+          "Mensagem": "Nao foi possivel cadastrar o produtor!",
         });
       });
   }
