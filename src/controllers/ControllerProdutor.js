@@ -24,7 +24,11 @@ export default new class ControllerProdutor {
   async consultaProdutor(req, res) {
     
     const { id } = req.query;
-
+        /*
+        Neste etapa é usado uma condicional para caso haja ID como parâmetro da requisição, retorne apenas 
+        os registros referentes a esse ID.
+        Caso não haja ID, o mesmo retorna todos
+        */
     await Produtor.findAll(id && { where: { idProdutor: id } })
       .then((r) => {
         res.json(r);

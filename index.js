@@ -5,7 +5,7 @@ import criarUsuario from "./src/config/UsuarioAPI.js";
 //Criando instância do express
 const app = express();
 
-//Chamando um middleware do Express serializar o corpo das requisições para objeto JavaScript
+//Chamando um middleware do Express para serializar o corpo das requisições para objeto JavaScript
 app.use(express.urlencoded());
 
 //Passando um middleware do Express para fazer o parse nas requisições
