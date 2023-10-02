@@ -163,9 +163,10 @@ Utilizando esta rota passando um ```Id``` como parâmetro, será retornado um **
 
 ```json
     {
-        "idProdutor": 1,
-        "nomeProdutor": "niceplanet",
-        "cpfProdutor": "00000000001",
+        "idPropriedade": 1,
+        "nomePropriedade": "Propriedade da Niceplanet",
+        "cadastroRural": "00000000022",
+        "produtorIdProdutor": 1
     }
 ```
 
