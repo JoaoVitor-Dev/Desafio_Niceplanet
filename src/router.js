@@ -5,6 +5,8 @@ import Checker from "./middlewares/Checker.js";
 import UserRules from "./middlewares/UserRules.js";
 import ControllerProdutor from "./controllers/ControllerProdutor.js";
 import ProducerRules from "./middlewares/ProducerRules.js";
+import ControllerProprieade from "./controllers/ControllerProprieade.js";
+import PropertyRules from "./middlewares/PropertyRules.js";
 
 const router = express.Router()
 
@@ -20,6 +22,8 @@ router.get('/teste', verificarJWT, (req, res) => {
 router.post('/novoProdutor', verificarJWT, ProducerRules(), Checker, ControllerProdutor.novoProdutor)
 
 router.get('/consultarProdutor', verificarJWT, ControllerProdutor.consultaProdutor)
+
+router.post('/novaPropriedade', verificarJWT, PropertyRules(), Checker, ControllerProprieade.novaPropriedade)
 
 export default router;
 
