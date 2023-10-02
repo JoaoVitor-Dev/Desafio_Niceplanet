@@ -5,8 +5,10 @@ export default new class ControllerProdutor {
   //Método para adicionar novo Produtor
   async novoProdutor(req, res) {
 
+    //Desentruturando objeto
     const { nomeProdutor, cpfProdutor } = req.body;
 
+    //Adicionando um novo Produtor
     await Produtor.create({ nomeProdutor, cpfProdutor })
       .then(() => {
         res.json({

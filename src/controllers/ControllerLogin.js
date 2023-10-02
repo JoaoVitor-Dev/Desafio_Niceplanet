@@ -4,6 +4,8 @@ import Jwt from "jsonwebtoken";
 
 export default new class ControllerLogin {
   async login(req, res) {
+
+    //Verificando se existe um usuário no banco de dados com o mesmo nome
     const usuario = await Usuario.findOne({
       attributes: ["nomeUsuario", "senhaUsuario"],
       where: {
