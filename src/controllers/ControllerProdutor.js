@@ -1,6 +1,6 @@
 import { Produtor } from "../models/index.js";
 
-export default new (class ControllerProdutor {
+export default new class ControllerProdutor {
   async novoProdutor(req, res) {
     const { nomeProdutor, cpfProdutor } = req.body;
 
@@ -30,4 +30,4 @@ export default new (class ControllerProdutor {
         });
       });
   }
-})();
+};

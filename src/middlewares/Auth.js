@@ -15,7 +15,6 @@ export default function verificarJWT(req, res, next) {
         message: "Falha da autenticação do Token",
       });
 
-      next()
+    next();
   });
-
 }

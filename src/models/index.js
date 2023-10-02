@@ -7,12 +7,11 @@ Produtor.hasMany(Propriedade)
 Propriedade.belongsTo(Produtor)
 
 
-//Importação e exportação das Models Usuario, Produtor, Propriedade e da configuração do Database
+//Exportação dos Models e da config do Database;
 export {
     Usuario,
     Produtor,
     Propriedade,
     database
-
 }
 

@@ -2,11 +2,11 @@ import { Propriedade } from "../models/index.js"
 
 export default new class ControllerPropriedade{
     async novaPropriedade(req, res){
-
+        //desestruturação aplicada
         const {nomePropriedade, cadastroRural, idProdutor} = req.body 
         await Propriedade.create({nomePropriedade, cadastroRural, produtorIdProdutor: idProdutor}).then(() => {
             res.json({
-                "Mensagem": "Proprieadade cadastrada com sucesso!"
+                "Mensagem": "Propriedade cadastrada com sucesso!"
             })
         }).catch(() => {
             res.status(500).json({
@@ -15,8 +15,16 @@ export default new class ControllerPropriedade{
         })
     }
 
-    async consultaProprieade(req, res){
-
-        await Propriedade.findAll()
-    }
+    async consultaPropriedade(req, res) {
+        const { id } = req.query;
+        await Produtor.findAll(id && { where: { idPropriedade: id } })
+          .then((r) => {
+            res.json(r);
+          })
+          .catch((error) => {
+            res.status(500).json({
+              mensagem: "Nao foi possivel consultar o produtor!",
+            });
+          });
+      }
 }

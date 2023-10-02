@@ -13,17 +13,13 @@ const router = express.Router()
 //Rota de login
 router.post('/login', UserRules(), Checker, ControllerLogin.login)
 
-router.get('/teste', verificarJWT, (req, res) => {
-    res.json({
-        "Testado": "sim"
-    })
-})
-
 router.post('/novoProdutor', verificarJWT, ProducerRules(), Checker, ControllerProdutor.novoProdutor)
 
 router.get('/consultarProdutor', verificarJWT, ControllerProdutor.consultaProdutor)
 
 router.post('/novaPropriedade', verificarJWT, PropertyRules(), Checker, ControllerProprieade.novaPropriedade)
+
+router.get('/consultarPropriedade', verificarJWT, ControllerProprieade.consultaPropriedade)
 
 export default router;
 
