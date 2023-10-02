@@ -12,7 +12,7 @@ const Produtor = db.define("produtor", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    "cpfprodutor": {
+    "cpfProdutor": {
         type: DataTypes.STRING,
         allowNull: false
     }

@@ -3,6 +3,8 @@ import ControllerLogin from "./controllers/ControllerLogin.js";
 import verificarJWT from "./middlewares/Auth.js";
 import Checker from "./middlewares/Checker.js";
 import UserRules from "./middlewares/UserRules.js";
+import ControllerProdutor from "./controllers/ControllerProdutor.js";
+import ProducerRules from "./middlewares/ProducerRules.js";
 
 const router = express.Router()
 
@@ -14,6 +16,10 @@ router.get('/teste', verificarJWT, (req, res) => {
         "Testado": "sim"
     })
 })
+
+router.post('/novoProdutor', verificarJWT, ProducerRules(), Checker, ControllerProdutor.novoProdutor)
+
+router.get('/consultarProdutor', verificarJWT, ControllerProdutor.consultaProdutor)
 
 export default router;
 

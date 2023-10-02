@@ -13,17 +13,16 @@ app.use('/api', router)
 
 app.on("connected", ()  => {
     app.listen(3000, () => {
-        console.log('rodando na porta 3000')
+        console.log('API rodando:http://localhost:3000')
     })    
 })
 
 try{
-
    await database.authenticate()
+   //comando para criar tabelas
    await database.sync()
    await criarUsuario()
    app.emit("connected")
-
 }catch(err){
 
 }

@@ -31,6 +31,7 @@ export default new class ControllerLogin {
             expiresIn: "2d"
         });
         
+        //retorna mensagem de login com sucesso + token de autênticação gerado
         res.json({
             mensagem: "Login realizado com sucesso!",
             token
