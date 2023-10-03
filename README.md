@@ -7,7 +7,7 @@ Projeto desenvolvido para o desafio da Niceplanet, com o objetivo de simular a c
 
 ## Especificações Técnicas:
 Node Js | Banco de Dados MySQL\
-Bibliotecas: Express | Sequelize | JWT  | bcryptjs
+Bibliotecas: Express | Sequelize | JWT  | bcryptjs | .env
 
 
 ## Executando o Projeto
